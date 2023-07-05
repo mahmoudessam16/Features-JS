@@ -26,7 +26,6 @@ ColorsLi.forEach((li) => {
         ColorsLi.forEach(li => {
             li.classList.remove('active');
         })
-        console.log(e.target.dataset.color)
         document.querySelector(`[data-color="${e.target.dataset.color}"]`).classList.add("active");
         document.documentElement.style.setProperty('--main-color', `${e.target.dataset.color}`);
         localStorage.setItem("color_option", e.target.dataset.color);
